@@ -646,3 +646,25 @@ echo HtmlLayout::create()
 
 
 
+
+
+What's next?
+===============
+
+What about decorative elements, like for instance a separator bar between two controls?
+
+Today, the form modelization doesn't have a mechanism to handle decorative elements.
+My suggestion though, if one wanted to implement such a mechanism would be to create a decoratives key
+at the root level, which would contain "decorative items".
+
+A decorative item would be an array which form remains to be implemented.
+
+Then, using the "order" key, or group children, we would be able to reference the decorative item as we already
+do for groups and controls.
+
+
+
+
+
+
+
