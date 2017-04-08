@@ -190,33 +190,6 @@ Those two questions will give us the following variables:
 
 
 
-Form messages
---------------
-
-Sometimes, errors are not related to any control in particular.
-For instance: there is a problem with the database, the form could'nt be saved.
-
-In general, we should be able to display some messages in the form, like success messages
-(the item has been successfully recorded in the database), or warning messages.
-
-All messages are stored in the form.messages property, which contains an array of messages to display.
-Each item of the array is an array with two entries: the message, and the message type (success, warning, info, error).
-Generally, we will use only one entry, but I prefer to anticipate the fact that one day someone will
-need to display more than one message.
-
-Here is how it looks like:
-
-```txt
-- messages:
------ [ The data was successfully recorded in the database, success ],
------ [ I sent an email to the administrator too (as per config.sendMailToAdmin), info ],
-
-```
-
-
-Note: this service works in parallel of the existing control error messages system.
-
-
 
 
 Example
@@ -234,9 +207,6 @@ $vars = [
         'htmlAttributes' => [
             'action' => "",
             'method' => "POST",
-        ],
-        'messages' => [
-            ["The item has been successfully recorded", "success"],
         ],
         "formErrorPosition" => "central",
         "displayFirstErrorOnly" => true,
@@ -459,9 +429,6 @@ $vars = [
         'htmlAttributes' => [
             'action' => "",
             'method' => "POST",
-        ],
-        'messages' => [
-            ["The item has been successfully recorded", "success"],
         ],
         "formErrorPosition" => "central",
         "displayFirstErrorOnly" => true,
