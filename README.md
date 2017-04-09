@@ -317,6 +317,18 @@ input text
 --------- value: string 
 ```
 
+input password
+----------------
+
+```txt
+- control:
+----- type: input
+----- htmlAttributes
+--------- type: password
+--------- value: string 
+```
+
+
 input file
 ----------------
 
@@ -610,6 +622,7 @@ echo HtmlLayout::create()
 
 
 ```
+
 
 
 
