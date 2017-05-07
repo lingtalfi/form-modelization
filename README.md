@@ -1,6 +1,6 @@
 Form modelization
 ===============================
-2017-04-07
+2017-04-07 --> 2017-05-07
 
 
 
@@ -186,8 +186,6 @@ Those two questions will give us the following variables:
 
 - form.formErrorPosition: (control|central)=control
 - form.displayFirstErrorOnly: bool=false
-
-
 
 
 
@@ -396,6 +394,39 @@ textarea
 ----- type: textarea
 ----- value: string
 ```
+
+
+
+
+Fancy Controls
+==================
+2017-05-07
+
+In almost every form, you need a submit button.
+The submit button can be modelized with a regular submit button that we've just described above,
+but observing most forms on the web, more often than not, the submit button has a special treatment;
+for instance it's separated with a divider line, or it has more margin top.
+
+Hence, I thought it was a good idea (for renderers) to have a special/dedicated part of the model
+to modelize the so-called submit button bar.
+It's modelized at the form level:
+
+
+Submit button bar
+---------------------
+
+```txt
+- form:
+----- submitButtonBar: 
+--------- enable: true
+--------- textSubmitButton: Submit
+--------- showResetButton: true
+--------- textResetButton: Reset
+
+```
+
+
+
 
 
 
@@ -622,6 +653,7 @@ echo HtmlLayout::create()
 
 
 ```
+
 
 
 
